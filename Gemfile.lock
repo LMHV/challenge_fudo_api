@@ -109,7 +109,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    mailgunner (2.6.0)
+    mailgunner (3.3.0)
     marcel (1.0.4)
     mini_mime (1.1.5)
     minitest (5.25.1)
@@ -239,7 +239,7 @@ DEPENDENCIES
   brakeman
   debug
   jwt
-  mailgunner (~> 2.4)
+  mailgunner (~> 3.3)
   puma (>= 5.0)
   rack-cors
   rails (~> 7.2.1)
