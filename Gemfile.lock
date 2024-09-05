@@ -109,6 +109,7 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mailgunner (2.6.0)
     marcel (1.0.4)
     mini_mime (1.1.5)
     minitest (5.25.1)
@@ -137,6 +138,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.7)
+    rack-cors (2.0.2)
+      rack (>= 2.0.0)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -236,7 +239,9 @@ DEPENDENCIES
   brakeman
   debug
   jwt
+  mailgunner (~> 2.4)
   puma (>= 5.0)
+  rack-cors
   rails (~> 7.2.1)
   rubocop-rails-omakase
   sqlite3 (>= 1.4)

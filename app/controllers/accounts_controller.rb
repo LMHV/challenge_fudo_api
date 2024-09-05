@@ -15,13 +15,19 @@ class AccountsController < ApplicationController
   
     # POST /accounts
     def create
-      @account = Account.new(account_params)
+      existing_account = Account.find_by(email: account_params[:email], username: account_params[:username])
   
-      if @account.save
-        token = self.class.encode_token({ account_id: @account.id })
-        render json: { account: @account, token: token }, status: :created, location: @account
+      if existing_account
+        render json: { error: 'Account already exists' }, status: :unprocessable_entity
       else
-        render json: @account.errors, status: :unprocessable_entity
+          @account = Account.new(account_params)
+
+        if @account.save
+          token = self.class.encode_token({ account_id: @account.id })
+          render json: { account: @account, token: token }, status: :created, location: @account
+        else
+          render json: @account.errors, status: :unprocessable_entity
+        end
       end
     end
   

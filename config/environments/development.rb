@@ -10,7 +10,8 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
-
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {domain: 'app123example.mailgun.org'}
   # Show full error reports.
   config.consider_all_requests_local = true
 
