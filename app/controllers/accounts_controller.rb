@@ -24,8 +24,11 @@ class AccountsController < ApplicationController
 
         if @account.save
           token = self.class.encode_token({ account_id: @account.id })
+          UserMailer.welcome_email(@account).deliver_now
+          Rails.logger.error(@account.errors.full_messages.join(', '))
           render json: { account: @account, token: token }, status: :created, location: @account
         else
+          Rails.logger.error(@account.errors.full_messages.join(', '))
           render json: @account.errors, status: :unprocessable_entity
         end
       end

@@ -86,6 +86,10 @@ GEM
     debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    dotenv (3.1.2)
+    dotenv-rails (3.1.2)
+      dotenv (= 3.1.2)
+      railties (>= 6.1)
     drb (2.2.1)
     erubi (1.13.0)
     globalid (1.2.1)
@@ -109,7 +113,6 @@ GEM
       net-imap
       net-pop
       net-smtp
-    mailgunner (2.6.0)
     marcel (1.0.4)
     mini_mime (1.1.5)
     minitest (5.25.1)
@@ -235,11 +238,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  actionmailer (~> 7.2)
   bootsnap
   brakeman
   debug
+  dotenv-rails
   jwt
-  mailgunner (~> 2.4)
   puma (>= 5.0)
   rack-cors
   rails (~> 7.2.1)
