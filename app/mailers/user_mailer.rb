@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
 
       @account = account
       @url  = 'http://localhost:5173'
-      mail(to: @account.email, subject: 'Welcome to My Awesome Site')
+      mail(to: @account.email, subject: '¡Bienvenido a DELI!')
     end
   end
   

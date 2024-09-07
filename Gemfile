@@ -16,6 +16,7 @@ gem 'mailgun-ruby', '~>1.2.6'
 gem 'ffi'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'letter_opener_web', group: :development
+gem 'launchy', '~> 2.5'
 
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
