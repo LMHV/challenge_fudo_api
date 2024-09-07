@@ -12,9 +12,11 @@ gem "puma", ">= 5.0"
 # gem "redis", ">= 4.0.1"
 gem "jwt"
 gem 'rack-cors'
-# gem 'mailgun-ruby', '~>1.2.14'
-gem 'actionmailer', '~> 7.2'
+gem 'mailgun-ruby', '~>1.2.6'
+gem 'ffi'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'letter_opener_web', group: :development
+
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

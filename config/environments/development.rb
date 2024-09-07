@@ -10,20 +10,20 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings  = {
     address:              'smtp.mailgun.org',
     port:                 587,
     domain:               ENV['MAILGUN_DOMAIN'],   # Set your domain here
-    user_name:            ENV['GMAIL_LOGIN'],   # SMTP username
-    password:             ENV['GMAIL_PASSWORD'], # SMTP password
+    user_name:            ENV['MAILGUN_SMTP_LOGIN'],   # SMTP username
+    password:             ENV['MAILGUN_SMTP_PASSWORD'], # SMTP password
     authentication:       'plain',
     enable_starttls_auto: true
   }
+  
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
-  config.action_mailer.default_options = { from: 'brad@fudo.challenge.com' }
   
 
   # Show full error reports.
