@@ -1,24 +1,58 @@
-# README
+# Fudo Challenge API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
 
-Things you may want to cover:
+Ensure you have the following installed on your machine:
 
-* Ruby version
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) (v3.3.4)
+- [Rails](https://guides.rubyonrails.org/getting_started.html#installing-rails) (v7.2.1)
+- [PostgreSQL](https://www.postgresql.org/download/)
+- [Bundler](https://bundler.io/) (`gem install bundler` if not installed)
 
-* System dependencies
+# Getting Started
 
-* Configuration
+1. Clone the repository:
 
-* Database creation
+    ```bash
+    git clone https://github.com/LMHV/challenge_fudo_api
+    cd challenge_fudo_api
+    ```
 
-* Database initialization
+2. Install dependencies:
 
-* How to run the test suite
+    ```bash
+    bundle install
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Set up environment variables:
 
-* Deployment instructions
+    Create a `.env` file at the root of the project.
+    There is and .env.example file where it shows the credentials used for the project.
 
-* ...
+    ```bash
+    DATABASE_USERNAME=your_db_username
+    DATABASE_PASSWORD=your_db_password
+    SECRET_KEY_BASE=your_secret_key_base
+    ```
+
+## Database Setup
+
+1. Create and set up the database:
+
+    ```bash
+    rails db:create
+    rails db:migrate
+    ```
+
+## Run the Application
+
+1. Start the Rails server:
+
+    ```bash
+    rails server
+    ```
+
+# About the project
+
+This Fudo challenge API has focus on creating accounts and sending email confirmations via Mailgun API.
+As Mailgun API only deliver real emails if it has a paid service, this project is using letter_opener_web to preview the email it would send.
