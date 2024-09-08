@@ -1,5 +1,11 @@
 # Fudo Challenge API
 
+## About the project
+
+This Fudo challenge API has focus on creating accounts and sending email confirmations via Mailgun API.
+As Mailgun API only deliver real emails if it has a paid service, this project is using letter_opener_web to preview the email it would send.
+
+
 ## Prerequisites
 
 Ensure you have the following installed on your machine:
@@ -52,8 +58,3 @@ Ensure you have the following installed on your machine:
     ```bash
     rails server
     ```
-
-# About the project
-
-This Fudo challenge API has focus on creating accounts and sending email confirmations via Mailgun API.
-As Mailgun API only deliver real emails if it has a paid service, this project is using letter_opener_web to preview the email it would send.
