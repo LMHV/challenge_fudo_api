@@ -30,9 +30,10 @@ Ensure you have the following installed on your machine:
     There is and .env.example file where it shows the credentials used for the project.
 
     ```bash
-    DATABASE_USERNAME=your_db_username
-    DATABASE_PASSWORD=your_db_password
-    SECRET_KEY_BASE=your_secret_key_base
+    MAILGUN_API_KEY=
+    MAILGUN_DOMAIN=
+    MAILGUN_SMTP_LOGIN=
+    MAILGUN_SMTP_PASSWORD=
     ```
 
 ## Database Setup
