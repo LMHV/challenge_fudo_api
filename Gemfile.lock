@@ -130,12 +130,13 @@ GEM
       net-imap
       net-pop
       net-smtp
-    mailgun-ruby (1.2.14)
+    mailgun-ruby (1.2.15)
       rest-client (>= 2.0.2)
     marcel (1.0.4)
-    mime-types (3.5.2)
+    mime-types (3.6.0)
+      logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2024.0903)
+    mime-types-data (3.2024.1001)
     mini_mime (1.1.5)
     minitest (5.25.1)
     msgpack (1.7.2)
@@ -276,7 +277,7 @@ DEPENDENCIES
   jwt
   launchy (~> 2.5)
   letter_opener_web
-  mailgun-ruby (~> 1.2.6)
+  mailgun-ruby (~> 1.2.15)
   puma (>= 5.0)
   rack-cors
   rails (~> 7.2.1)
