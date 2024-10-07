@@ -12,7 +12,7 @@ gem "puma", ">= 5.0"
 # gem "redis", ">= 4.0.1"
 gem "jwt"
 gem 'rack-cors'
-gem 'mailgun-ruby', '~>1.2.6'
+gem 'mailgun-ruby', '~>1.2.15'
 gem 'ffi'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'letter_opener_web', group: :development
